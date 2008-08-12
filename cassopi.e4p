@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.2.dtd">
 <!-- eric4 project file for project cassopi -->
-<!-- Saved: 2008-08-12, 20:32:31 -->
+<!-- Saved: 2008-08-12, 20:41:43 -->
 <!-- Copyright (C) 2008 ,  -->
 <Project version="4.2">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -14,6 +14,18 @@
     </Source>
     <Source>
       <Name>mathutils.py</Name>
+    </Source>
+    <Source>
+      <Name>viewport.py</Name>
+    </Source>
+    <Source>
+      <Name>drawutils.py</Name>
+    </Source>
+    <Source>
+      <Name>multiviewport.py</Name>
+    </Source>
+    <Source>
+      <Name>tesselator.py</Name>
     </Source>
   </Sources>
   <Forms>
