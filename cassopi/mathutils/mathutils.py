@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
+
 from math import acos, cos, hypot, pi, sqrt
 
-ORIGIN = [0.0, 0.0, 0.0] # to constants?
+ORIGIN = [0.0, 0.0, 0.0]
 
 def clamp(n, min_val, max_val):
     '''
@@ -433,11 +435,13 @@ def distance(a, b):
         return dist
     return distance_recursion(a, b, hypot(a[0] - b[0], a[1] - b[1]), 2)
 
-# enable contract checking
-import contract
-contract.checkmod(__name__)
-
 def _test():
+    try:
+        import contract
+        contract.checkmod(__name__)
+    except ImportError:
+        pass # could log this once?
+    
     import doctest
     return doctest.testmod()
 

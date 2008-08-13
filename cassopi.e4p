@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.2.dtd">
 <!-- eric4 project file for project cassopi -->
-<!-- Saved: 2008-08-12, 20:41:43 -->
+<!-- Saved: 2008-08-13, 11:35:34 -->
 <!-- Copyright (C) 2008 ,  -->
 <Project version="4.2">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -10,22 +10,72 @@
   <Email></Email>
   <Sources>
     <Source>
+      <Dir>cassopi</Dir>
+      <Name>cassopi.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>colorutils</Dir>
       <Name>colorutils.py</Name>
     </Source>
     <Source>
-      <Name>mathutils.py</Name>
+      <Dir>cassopi</Dir>
+      <Dir>colorutils</Dir>
+      <Name>__init__.py</Name>
     </Source>
     <Source>
-      <Name>viewport.py</Name>
+      <Dir>cassopi</Dir>
+      <Name>__init__.py</Name>
     </Source>
     <Source>
+      <Dir>cassopi</Dir>
+      <Dir>graphicsutils</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>graphicsutils</Dir>
       <Name>drawutils.py</Name>
     </Source>
     <Source>
+      <Dir>cassopi</Dir>
+      <Dir>graphicsutils</Dir>
       <Name>multiviewport.py</Name>
     </Source>
     <Source>
+      <Dir>cassopi</Dir>
+      <Dir>graphicsutils</Dir>
       <Name>tesselator.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>graphicsutils</Dir>
+      <Name>viewport.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>mathutils</Dir>
+      <Name>mathutils.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>mathutils</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>testutils</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>testutils</Dir>
+      <Name>tester.py</Name>
     </Source>
   </Sources>
   <Forms>
