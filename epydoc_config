@@ -1,0 +1,38 @@
+[epydoc] # Epydoc section marker (required by ConfigParser)
+
+# Information about the project.
+name: Cassopi
+url: http://code.google.com/p/cassopi/
+
+# The list of modules to document.  Modules can be named using
+# dotted names, module filenames, or package directory names.
+# This option may be repeated.
+modules: cassopi
+
+# Write html output to the directory "apidocs"
+output: html
+target: apidocs/
+
+# Include all automatically generated graphs.  These graphs are
+# generated using Graphviz dot.
+graph: all
+dotpath: /usr/bin/dot
+
+# verbosity
+#   An integer indicating how verbose epydoc should be.  The default
+#   value is 0; negative values will supress warnings and errors;
+#   positive values will give more verbose output.
+verbosity: 0
+
+# parse
+#   Whether or not parsing should be used to examine objects.
+parse: yes
+
+# introspect
+#   Whether or not introspection should be used to examine objects.
+introspect: yes
+
+# frames
+#   Whether or not to include a frames-based table of contents.
+frames: yes
+
