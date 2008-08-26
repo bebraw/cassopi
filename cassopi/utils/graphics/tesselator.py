@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 from OpenGL.GL import *
 from OpenGL.GLU import *
+"""
+GLU tesselator. Note that the dependency to PyOpenGL isn't particularly nice.
+It would be nicer to use Pyglet for this if possible!
+"""
 
 class RenderVertex():
     def __init__(self, vertex):

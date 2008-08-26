@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+"""
+Viewport classes. (abstract, ortho, perspective). Still missing 3d ortho though.
+Also needs some tweaks to camera! (see http://sjbaker.org/steve/omniv/projection_abuse.html ).
+"""
 from pyglet import app, clock, window
 from pyglet.gl import *
 from pyglet.window import key

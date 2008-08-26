@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+Basic primitives.
+"""
 import ctypes
 from math import cos, pi, sin
 
