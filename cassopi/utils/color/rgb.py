@@ -1,36 +1,16 @@
 # -*- coding: utf-8 -*-
-from random import random
 
-from mathutils import clamp
-
-RED = [1.0, 0.0, 0.0]
-GREEN = [0.0, 1.0, 0.0]
-BLUE = [0.0, 0.0, 1.0]
-ORANGE = [1.0, 0.5, 0.0]
-YELLOW = [1.0, 1.0, 0.0]
-PURPLE = [1.0, 0.0, 1.0]
-WHITE = [1.0, 1.0, 1.0]
-BLACK = [0.0, 0.0, 0.0]
-
-def get_color_instance(color):
-    if isinstance(color, Color):
+def get_rgb_color_instance(color):
+    if isinstance(color, RGBColor):
         return color
     elif type(color) is list:
-        return Color(color)
-    return Color()
+        return RGBColor(color)
+    return RGBColor()
 
-def generate_random_color(variance=128, offset=128):
-    color = []
-    
-    for col in range(3):
-        val = int(random() * variance + offset)
-        color.append(clamp(val, 0, 255))
-    
-    return color
-
-class Color(): # convert to base class later if other color spaces are needed
+class RGBColor():
     '''
-    A color containing three color channels. They are considered red, green and blue by default.
+    A color containing red, green and blue color channels.
+    They are defined as floats on range [0.0, 1.0].
     '''
     def __init__(self, rgb=[0.0, 0.0, 0.0]):
         '''
@@ -47,10 +27,10 @@ class Color(): # convert to base class later if other color spaces are needed
     def __str__(self):
         '''
         
-        >>> color = Color()
+        >>> color = RGBColor()
         >>> print color
         0.000 0.000 0.000
-        >>> color = Color([0.5, 0.5, 1.0])
+        >>> color = RGBColor([0.5, 0.5, 1.0])
         >>> print color
         0.500 0.500 1.000
         '''
@@ -59,7 +39,7 @@ class Color(): # convert to base class later if other color spaces are needed
     def __mul__(self, fac):
         '''
         
-        >>> color1 = Color([0.5, 0.5, 1.0])
+        >>> color1 = RGBColor([0.5, 0.5, 1.0])
         >>> color2 = color1 * 2.0
         >>> print color2
         1.000 1.000 2.000
@@ -71,7 +51,7 @@ class Color(): # convert to base class later if other color spaces are needed
     def quantize(self, fac=255):
         '''
         
-        >>> color = Color([1.0, 1.0, 2.0])
+        >>> color = RGBColor([1.0, 1.0, 2.0])
         >>> color.quantize()
         [255.0, 255.0, 510.0]
         '''
@@ -80,19 +60,8 @@ class Color(): # convert to base class later if other color spaces are needed
     def as_list(self):
         '''
         
-        >>> color = Color([1.0, 0.5, 1.0])
+        >>> color = RGBColor([1.0, 0.5, 1.0])
         >>> color.as_list()
         [1.0, 0.5, 1.0]
         '''
         return [self.r, self.g, self.b]
-
-# enable contract checking
-import contract
-contract.checkmod(__name__)
-
-def _test():
-    import doctest
-    return doctest.testmod()
-
-if __name__ == '__main__':
-    _test()
