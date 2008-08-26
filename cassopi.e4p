@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.2.dtd">
 <!-- eric4 project file for project cassopi -->
-<!-- Saved: 2008-08-13, 11:35:34 -->
+<!-- Saved: 2008-08-26, 19:10:42 -->
 <!-- Copyright (C) 2008 ,  -->
 <Project version="4.2">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -12,16 +12,6 @@
     <Source>
       <Dir>cassopi</Dir>
       <Name>cassopi.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>colorutils</Dir>
-      <Name>colorutils.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>colorutils</Dir>
-      <Name>__init__.py</Name>
     </Source>
     <Source>
       <Dir>cassopi</Dir>
@@ -54,28 +44,90 @@
     </Source>
     <Source>
       <Dir>cassopi</Dir>
-      <Dir>mathutils</Dir>
-      <Name>mathutils.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>mathutils</Dir>
-      <Name>__init__.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>testutils</Dir>
-      <Name>__init__.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
       <Dir>ui</Dir>
       <Name>__init__.py</Name>
     </Source>
     <Source>
       <Dir>cassopi</Dir>
-      <Dir>testutils</Dir>
-      <Name>tester.py</Name>
+      <Dir>utils</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>graphics</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>math</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>color</Dir>
+      <Name>constants.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>color</Dir>
+      <Name>rgb.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>color</Dir>
+      <Name>misc.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>color</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>math</Dir>
+      <Name>ray.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>math</Dir>
+      <Name>coordinate.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>math</Dir>
+      <Name>constants.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>math</Dir>
+      <Name>vector.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>math</Dir>
+      <Name>misc.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>math</Dir>
+      <Name>rotation.py</Name>
     </Source>
   </Sources>
   <Forms>
