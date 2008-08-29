@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.2.dtd">
 <!-- eric4 project file for project cassopi -->
-<!-- Saved: 2008-08-29, 12:19:07 -->
+<!-- Saved: 2008-08-29, 13:04:14 -->
 <!-- Copyright (C) 2008 ,  -->
 <Project version="4.2">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -141,11 +141,6 @@
     <Source>
       <Dir>cassopi</Dir>
       <Dir>ui</Dir>
-      <Name>viewmanager.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>ui</Dir>
       <Name>multiviewport.py</Name>
     </Source>
     <Source>
@@ -213,11 +208,6 @@
     <Source>
       <Dir>cassopi</Dir>
       <Dir>ui</Dir>
-      <Name>tabmanager.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>ui</Dir>
       <Dir>elements</Dir>
       <Name>button.py</Name>
     </Source>
@@ -226,6 +216,18 @@
       <Dir>ui</Dir>
       <Dir>elements</Dir>
       <Name>element.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Dir>managers</Dir>
+      <Name>viewmanager.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Dir>managers</Dir>
+      <Name>tabmanager.py</Name>
     </Source>
   </Sources>
   <Forms>
