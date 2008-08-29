@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.2.dtd">
 <!-- eric4 project file for project cassopi -->
-<!-- Saved: 2008-08-26, 19:10:42 -->
+<!-- Saved: 2008-08-28, 20:02:08 -->
 <!-- Copyright (C) 2008 ,  -->
 <Project version="4.2">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -16,31 +16,6 @@
     <Source>
       <Dir>cassopi</Dir>
       <Name>__init__.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>graphicsutils</Dir>
-      <Name>__init__.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>graphicsutils</Dir>
-      <Name>drawutils.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>graphicsutils</Dir>
-      <Name>multiviewport.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>graphicsutils</Dir>
-      <Name>tesselator.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>graphicsutils</Dir>
-      <Name>viewport.py</Name>
     </Source>
     <Source>
       <Dir>cassopi</Dir>
@@ -128,6 +103,40 @@
       <Dir>utils</Dir>
       <Dir>math</Dir>
       <Name>rotation.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>utils</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>utils</Dir>
+      <Dir>graphics</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>utils</Dir>
+      <Dir>math</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>utils</Dir>
+      <Dir>color</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>utils</Dir>
+      <Dir>math</Dir>
+      <Name>vector_test.py</Name>
     </Source>
   </Sources>
   <Forms>
