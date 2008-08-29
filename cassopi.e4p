@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.2.dtd">
 <!-- eric4 project file for project cassopi -->
-<!-- Saved: 2008-08-28, 20:02:08 -->
+<!-- Saved: 2008-08-29, 12:19:07 -->
 <!-- Copyright (C) 2008 ,  -->
 <Project version="4.2">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -137,6 +137,95 @@
       <Dir>utils</Dir>
       <Dir>math</Dir>
       <Name>vector_test.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>viewmanager.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>multiviewport.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>sidebar.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Dir>views</Dir>
+      <Name>nodeview.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>view.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>ui</Dir>
+      <Name>viewmanager_test.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>window.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>mainsidebar.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>graphics</Dir>
+      <Name>primitives.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>graphics</Dir>
+      <Name>tesselator.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>graphics</Dir>
+      <Name>viewport.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Dir>elements</Dir>
+      <Name>tab.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Dir>elements</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>tabmanager.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Dir>elements</Dir>
+      <Name>button.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Dir>elements</Dir>
+      <Name>element.py</Name>
     </Source>
   </Sources>
   <Forms>

@@ -1,4 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Execute this file to execute the program. :)
+Cassopi - a nodal sketching program.
 """
+from pyglet import app
+
+from ui.window import CassopiWindow
+
+if __name__ == "__main__":
+    cassopi_window = CassopiWindow()
+    app.run()
