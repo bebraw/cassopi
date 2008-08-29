@@ -4,7 +4,9 @@ Manager of tabs.
 """
 
 class TabManager():
-    def __init__(self):
+    def __init__(self, max_width):
+        self.max_width = max_width
+        
         self.active = 0
         self.tabs = []
     
@@ -16,7 +18,13 @@ class TabManager():
         Renders tabs.
         """
         # render header
+        for i, tab in enumerate(self.tabs):
+            if i == self.active:
+                pass # white bg
+            else:
+                pass # blue bg (change these later!)
+            
+            # render tab name
         
-        
-        # render contents of the active tab
+        # render contents of the active tab (exception, invalid index!)
         self.tabs[self.active].render()

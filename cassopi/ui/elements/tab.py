@@ -12,3 +12,9 @@ class Tab(Element):
     
     def add(self, element):
         self.elements.append(element)
+    
+    def render(self):
+        """
+        Render contents of tab (doesn't include tab name!).
+        """
+        pass

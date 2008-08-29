@@ -11,6 +11,7 @@ from colorutils import *
 from drawutils import Polygon, Vertex
 from mathutils import *
 
+# bottom = low, left corner. top = top, right corner!!! rename these?
 class Viewport(object):
     def __init__(self, bottom_x, bottom_y, top_x, top_y, bg_color):
         self.x = int(bottom_x)
@@ -55,7 +56,7 @@ class PerspectiveViewport(Viewport):
         glTranslatef(*self.loc.as_list())
 
 class OrthoViewport(Viewport):
-    def __init__(self, bottom_x, bottom_y, top_x, top_y, bg_color):
+    def __init__(self, bottom_x=0, bottom_y=0, top_x=0, top_y=0, bg_color=BLACK):
         super(OrthoViewport, self).__init__(bottom_x, bottom_y, top_x, top_y, bg_color)
     
     def render(self):

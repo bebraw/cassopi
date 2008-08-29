@@ -8,9 +8,20 @@ from elements.tab import Tab
 from sidebar import Sidebar
 from tabmanager import TabManager
 
+MAIN_SIDEBAR_MAX_WIDTH = 250
+
+# events (sidebar width change), loc (right, left)
+
 class MainSidebar(Sidebar):
-    def __init__(self):
-        self.tab_manager = TabManager()
+    def __init__(self, height): # height to Sidebar???
+        super(MainSidebar, self).__init__()
+        
+        self.height = height
+        
+        self.viewport.top_x = MAIN_SIDEBAR_MAX_WIDTH
+        self.viewport.top_y = self.height # should get window height here in some nice way (CassopiWindow height change -> sidebar height etc.) (works as reference? validate. if not, use trigger)
+        
+        self.tab_manager = TabManager(max_width=MAIN_SIDEBAR_MAX_WIDTH)
         
         # ElementGroup ???
         main_tab = Tab('Main')

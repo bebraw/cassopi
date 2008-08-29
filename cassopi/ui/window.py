@@ -11,11 +11,12 @@ class CassopiWindow(window.Window):
         super(CassopiWindow, self).__init__(width=width, height=height, resizable=resizable, visible=visible)
         
         # default view
-        self.main_sidebar = MainSidebar()
+        self.main_sidebar = MainSidebar(self.height)
         #self.views = [NodeView()]
     
     def on_draw(self):
         self.main_sidebar.render()
     
     def on_resize(self, width, height):
-        pass
+        pass # should update views here!
+        self.main_sidebar.height = height
