@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from cassopi.ui.paddings import Padding
-from cassopi.ui.uicontainers import VerticalContainer
+from cassopi.ui.containers import VerticalContainer
 
 def test_create_VerticalContainer():
     vertical_container = VerticalContainer()

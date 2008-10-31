@@ -1,4 +1,4 @@
-from cassopi.utils.yaml.yamlparser import read_yaml
+from cassopi.utils.yaml.parser import read_yaml
 
 test_structure = '''
 - some_item:

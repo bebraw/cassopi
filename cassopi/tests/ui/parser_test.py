@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from cassopi.ui.uicontainers import VerticalContainer
-from cassopi.ui.uiparser import parse_ui, parse_vertical_container
-from cassopi.utils.yaml.yamlparser import read_yaml
+from cassopi.ui.containers import VerticalContainer
+from cassopi.ui.parser import parse_ui, parse_vertical_container
+from cassopi.utils.yaml.parser import read_yaml
 
 minimal_structure = '''
 vertical_container:

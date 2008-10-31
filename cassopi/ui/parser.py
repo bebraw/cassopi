@@ -1,6 +1,6 @@
 from paddings import Padding
-from uicontainers import VerticalContainer
-from cassopi.utils.yaml.yamlparser import read_yaml
+from containers import VerticalContainer
+from cassopi.utils.yaml.parser import read_yaml
 
 def parse_ui(structure):
     content = read_yaml(structure)
