@@ -1,13 +1,17 @@
-directions = ('top', 'bottom', 'left', 'right', )
+from elements import AbstractElement
 
-def check_arg(dict, arg):
-    return max(dict[arg] if dict.has_key(arg) else 0, 0)
-
-class Padding():
-    def __init__(self, **kwargs):
-        if kwargs.has_key('all'):
-            for direction in directions:
-                kwargs[direction] = kwargs['all']
+class Padding(AbstractElement):
+    suitable_values = ('top', 'bottom', 'left', 'right', )
+    
+    def __init__(self, args=None):
+        for suitable_value in self.suitable_values:
+            self.__dict__[suitable_value] = 0
         
-        for direction in directions:
-            self.__dict__[direction] = check_arg(kwargs, direction)
+        if args and args.has_key('all'):
+            for suitable_value in self.suitable_values:
+                args[suitable_value] = args['all']
+        
+        super(Padding, self).__init__(args)
+        
+    def check_arg(self, dict, arg):
+        return max(dict[arg] if dict.has_key(arg) else 0, 0)

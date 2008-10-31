@@ -11,7 +11,7 @@ def test_create_empty_padding():
     assert padding.bottom == 0
 
 def test_create_padding_with_values():
-    padding = Padding(top=10, right=5, bottom=20, left=15)
+    padding = Padding({'top':10, 'right':5, 'bottom':20, 'left':15})
     
     assert isinstance(padding, Padding)
     assert padding.top == 10
@@ -20,7 +20,7 @@ def test_create_padding_with_values():
     assert padding.bottom == 20
 
 def test_create_padding_with_invalid_values():
-    padding = Padding(top=-10, right=-5, bottom=-20, left=-15)
+    padding = Padding({'top':-10, 'right':-5, 'bottom':-20, 'left':-15})
     
     assert isinstance(padding, Padding)
     assert padding.top == 0
@@ -29,14 +29,14 @@ def test_create_padding_with_invalid_values():
     assert padding.bottom == 0
 
 def test_create_padding_with_dictionary():
-    padding = Padding(**{'top': 5, 'right': 10, })
+    padding = Padding({'top': 5, 'right': 10, })
     
     assert isinstance(padding, Padding)
     assert padding.top == 5
     assert padding.right == 10
 
 def test_create_padding_with_all():
-    padding = Padding(**{'all': 10})
+    padding = Padding({'all': 10})
     
     assert isinstance(padding, Padding)
     assert padding.top == 10
