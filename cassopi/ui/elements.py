@@ -15,12 +15,6 @@ class AbstractElement(object):
 
 class TextBox(AbstractElement):
     suitable_values = ('name', 'value', 'tooltip', 'max_input_length', )
-    
-    def __init__(self, args=None):
-        super(TextBox, self).__init__(args)
 
 class ToggleButton(AbstractElement):
     suitable_values = ('name', 'value', 'tooltip', )
-    
-    def __init__(self, args=None):
-        super(ToggleButton, self).__init__(args)
