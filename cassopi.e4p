@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.2.dtd">
 <!-- eric4 project file for project cassopi -->
-<!-- Saved: 2008-10-31, 21:40:27 -->
+<!-- Saved: 2008-10-31, 21:48:32 -->
 <!-- Copyright (C) 2008 ,  -->
 <Project version="4.2">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -196,30 +196,6 @@
     <Source>
       <Dir>cassopi</Dir>
       <Dir>ui</Dir>
-      <Dir>elements</Dir>
-      <Name>tab.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>ui</Dir>
-      <Dir>elements</Dir>
-      <Name>__init__.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>ui</Dir>
-      <Dir>elements</Dir>
-      <Name>button.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>ui</Dir>
-      <Dir>elements</Dir>
-      <Name>element.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>ui</Dir>
       <Dir>managers</Dir>
       <Name>viewmanager.py</Name>
     </Source>
@@ -315,14 +291,7 @@
     <Source>
       <Dir>cassopi</Dir>
       <Dir>ui</Dir>
-      <Dir>elements</Dir>
-      <Name>textbox.py</Name>
-    </Source>
-    <Source>
-      <Dir>cassopi</Dir>
-      <Dir>ui</Dir>
-      <Dir>elements</Dir>
-      <Name>togglebutton.py</Name>
+      <Name>elements.py</Name>
     </Source>
   </Sources>
   <Forms>

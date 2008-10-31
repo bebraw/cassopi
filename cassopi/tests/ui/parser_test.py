@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from cassopi.ui.containers import HorizontalContainer, VerticalContainer
-from cassopi.ui.elements.textbox import TextBox
-from cassopi.ui.elements.togglebutton import ToggleButton
+from cassopi.ui.elements import TextBox, ToggleButton
 from cassopi.ui.parser import StructureParser
 from cassopi.utils.yaml.parser import read_yaml
 
