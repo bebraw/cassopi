@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from cassopi.ui.containers import HorizontalContainer, VerticalContainer
+from cassopi.ui.elements.textbox import TextBox
+from cassopi.ui.elements.togglebutton import ToggleButton
 from cassopi.ui.parser import StructureParser
 from cassopi.utils.yaml.parser import read_yaml
 
@@ -147,3 +149,44 @@ def test_StructureParser_parse_hierarchy_with_multiple_containers():
     assert root_child2.padding.left == 20
     assert root_child2.padding.right == 5
     assert root_child2.padding.bottom == 0
+
+structure_with_ui_elements = '''
+VerticalContainer:
+    children:
+        - HorizontalContainer:
+            children:
+                - TextBox:
+                    name: Enter name
+                    value: John Doe
+                    tooltip: Please enter your name here
+                    max_input_length: 40
+                - ToggleButton:
+                    name: Toggle this
+                    value: True
+                    tooltip: Try toggling this
+'''
+
+def test_StructureParser_parse_hierarchy_with_ui_elements():
+    structure_parser = StructureParser(structure_with_ui_elements)
+    
+    root = structure_parser.parse()
+    assert isinstance(root, VerticalContainer)
+    
+    root_child = root.children[0]
+    
+    assert isinstance(root_child, HorizontalContainer)
+    
+    textbox = root_child.children[0]
+    
+    assert isinstance(textbox, TextBox)
+    assert textbox.name == 'Enter name'
+    assert textbox.value == 'John Doe'
+    assert textbox.tooltip == 'Please enter your name here'
+    assert textbox.max_input_length == 40
+    
+    togglebutton = root_child.children[1]
+    
+    assert isinstance(togglebutton, ToggleButton)
+    assert togglebutton.name == 'Toggle this'
+    assert togglebutton.value == True
+    assert togglebutton.tooltip == 'Try toggling this'
