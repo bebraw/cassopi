@@ -1,27 +1,21 @@
 # -*- coding: utf-8 -*-
 from cassopi.ui.containers import HorizontalContainer, VerticalContainer
-from cassopi.ui.parser import parse_ui, parse_vertical_container
+from cassopi.ui.parser import StructureParser
 from cassopi.utils.yaml.parser import read_yaml
 
 minimal_structure = '''
-vertical_container:
+VerticalContainer:
 '''
 
-def test_parse_minimal_vertical_container():
-    content = read_yaml(minimal_structure)
-    root = content['vertical_container']
-    vertical_container = parse_vertical_container(root)
+def test_StructureParser_parse_minimal():
+    structure_parser = StructureParser(minimal_structure)
     
-    assert isinstance(vertical_container, VerticalContainer)
-
-def test_read_minimal_ui_hierarchy():
-    root = parse_ui(minimal_structure)
-    
-    assert root is not None
+    assert isinstance(structure_parser, StructureParser)
+    root = structure_parser.parse()
     assert isinstance(root, VerticalContainer)
 
 structure_with_padding_in_all_directions = '''
-vertical_container:
+VerticalContainer:
     padding:
         top: 5
         left: 10
@@ -29,20 +23,10 @@ vertical_container:
         bottom: 20
 '''
 
-def test_parse_vertical_container_with_padding():
-    content = read_yaml(structure_with_padding_in_all_directions)
-    root = content['vertical_container']
-    vertical_container = parse_vertical_container(root)
+def test_StructureParser_parse_vertical_container_with_padding():
+    structure_parser = StructureParser(structure_with_padding_in_all_directions)
     
-    assert isinstance(vertical_container, VerticalContainer)
-    assert vertical_container.padding.top == 5
-    assert vertical_container.padding.left == 10
-    assert vertical_container.padding.right == 15
-    assert vertical_container.padding.bottom == 20
-
-def test_read_ui_hierarchy_with_padding_in_all_directions():
-    root = parse_ui(structure_with_padding_in_all_directions)
-    
+    root = structure_parser.parse()
     assert isinstance(root, VerticalContainer)
     assert root.padding.top == 5
     assert root.padding.left == 10
@@ -50,25 +34,15 @@ def test_read_ui_hierarchy_with_padding_in_all_directions():
     assert root.padding.bottom == 20
 
 structure_with_all_padding = '''
-vertical_container:
+VerticalContainer:
     padding:
         all: 10
 '''
 
-def test_parse_vertical_container_with_all_padding():
-    content = read_yaml(structure_with_all_padding)
-    root = content['vertical_container']
-    vertical_container = parse_vertical_container(root)
+def test_StructureParser_parse_container_with_all_padding():
+    structure_parser = StructureParser(structure_with_all_padding)
     
-    assert isinstance(vertical_container, VerticalContainer)
-    assert vertical_container.padding.top == 10
-    assert vertical_container.padding.left == 10
-    assert vertical_container.padding.right == 10
-    assert vertical_container.padding.bottom == 10
-
-def test_read_ui_hierarchy_with_all_padding():
-    root = parse_ui(structure_with_all_padding)
-    
+    root = structure_parser.parse()
     assert isinstance(root, VerticalContainer)
     assert root.padding.top == 10
     assert root.padding.left == 10
@@ -76,19 +50,20 @@ def test_read_ui_hierarchy_with_all_padding():
     assert root.padding.bottom == 10
 
 structure_with_another_vertical_container = '''
-vertical_container:
+VerticalContainer:
     padding:
         all: 10
-    contains:
-        - vertical_container:
+    children:
+        - VerticalContainer:
             padding:
                 right: 15
                 left: 5
 '''
 
-def test_read_ui_hierarchy_with_contains():
-    root = parse_ui(structure_with_another_vertical_container)
+def test_StructureParser_parse_hierarchy_with_children():
+    structure_parser = StructureParser(structure_with_another_vertical_container)
     
+    root = structure_parser.parse()
     assert isinstance(root, VerticalContainer)
     assert root.padding.top == 10
     assert root.padding.left == 10
@@ -104,19 +79,20 @@ def test_read_ui_hierarchy_with_contains():
     assert root_child.padding.bottom == 0
 
 structure_with_another_horizontal_container = '''
-vertical_container:
+VerticalContainer:
     padding:
         all: 10
-    contains:
-        - horizontal_container:
+    children:
+        - HorizontalContainer:
             padding:
                 right: 5
                 top: 50
 '''
 
-def test_read_ui_hierarchy_with_contains_and_horizontal_container():
-    root = parse_ui(structure_with_another_horizontal_container)
+def test_StructureParser_parse_hierarchy_with_children_and_horizontal_container():
+    structure_parser = StructureParser(structure_with_another_horizontal_container)
     
+    root = structure_parser.parse()
     assert isinstance(root, VerticalContainer)
     assert root.padding.top == 10
     assert root.padding.left == 10
@@ -132,23 +108,24 @@ def test_read_ui_hierarchy_with_contains_and_horizontal_container():
     assert root_child.padding.bottom == 0
 
 structure_with_multiple_containers = '''
-vertical_container:
+VerticalContainer:
     padding:
         all: 10
-    contains:
-        - horizontal_container:
+    children:
+        - HorizontalContainer:
             padding:
                 right: 25
                 top: 5
-        - vertical_container:
+        - VerticalContainer:
             padding:
                 left: 20
                 right: 5
 '''
 
-def test_read_ui_hierarchy_with_multiple_containers():
-    root = parse_ui(structure_with_multiple_containers)
+def test_StructureParser_parse_hierarchy_with_multiple_containers():
+    structure_parser = StructureParser(structure_with_multiple_containers)
     
+    root = structure_parser.parse()
     assert isinstance(root, VerticalContainer)
     assert root.padding.top == 10
     assert root.padding.left == 10

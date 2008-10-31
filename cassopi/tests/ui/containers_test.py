@@ -45,3 +45,20 @@ def test_add_child_to_HorizontalContainer():
     horizontal_container_child = horizontal_container.children[0]
     
     assert horizontal_container_child is horizontal_container2
+
+def test_create_container_with_dict_for_padding():
+    horizontal_container = HorizontalContainer(padding={'top': 5, })
+    
+    assert horizontal_container.padding.top == 5
+
+def test_create_container_with_padding_args():
+    horizontal_container = HorizontalContainer(args={'padding': {'top': 5, 'left': 10, }, })
+    
+    assert horizontal_container.padding.top == 5
+    assert horizontal_container.padding.left == 10
+
+def test_create_container_with_children_args():
+    vertical_container = VerticalContainer(args={'children': [{'VerticalContainer': {'padding': {'top': 15, }, }, }, ], })
+    
+    assert isinstance(vertical_container.children[0], VerticalContainer)
+    assert vertical_container.children[0].padding.top == 15
