@@ -1,5 +1,4 @@
-from elements.textbox import TextBox
-from elements.togglebutton import ToggleButton
+from elements import TextBox, ToggleButton
 from paddings import Padding
 
 class AbstractContainer():
