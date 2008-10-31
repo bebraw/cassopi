@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.2.dtd">
 <!-- eric4 project file for project cassopi -->
-<!-- Saved: 2008-08-29, 13:04:14 -->
+<!-- Saved: 2008-10-31, 17:27:02 -->
 <!-- Copyright (C) 2008 ,  -->
 <Project version="4.2">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -228,6 +228,46 @@
       <Dir>ui</Dir>
       <Dir>managers</Dir>
       <Name>tabmanager.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>utils</Dir>
+      <Dir>math</Dir>
+      <Name>coordinate_test.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>yaml</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>utils</Dir>
+      <Dir>yaml</Dir>
+      <Name>yamlparser.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>utils</Dir>
+      <Dir>yaml</Dir>
+      <Name>__init__.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>utils</Dir>
+      <Dir>yaml</Dir>
+      <Name>yamlparser_test.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>utils</Dir>
+      <Dir>yaml</Dir>
+      <Name>valid.yaml</Name>
     </Source>
   </Sources>
   <Forms>
