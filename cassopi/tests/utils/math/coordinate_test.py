@@ -24,32 +24,22 @@ def test_coordinate_as_string():
 def test_coordinate_add():
     coordinate = Coordinate(x=5.0, y=3.0, z=7.0)
     
-    coordinate_sum = coordinate + 5
+    for summable in (5, 5.0, ):
+        coordinate_sum = coordinate + summable
     
-    assert coordinate_sum.x == 10.0
-    assert coordinate_sum.y == 8.0
-    assert coordinate_sum.z == 12.0
-    
-    coordinate_sum = coordinate + 5.0
-    
-    assert coordinate_sum.x == 10.0
-    assert coordinate_sum.y == 8.0
-    assert coordinate_sum.z == 12.0
+        assert coordinate_sum.x == 10.0
+        assert coordinate_sum.y == 8.0
+        assert coordinate_sum.z == 12.0
 
 def test_coordinate_div():
     coordinate = Coordinate(x=5.0, y=3.0, z=7.0)
     
-    coordinate_div = coordinate / 2
+    for divisor in (2, 2.0, ):
+        coordinate_div = coordinate / divisor
     
-    assert coordinate_div.x == 2.5
-    assert coordinate_div.y == 1.5
-    assert coordinate_div.z == 3.5
-    
-    coordinate_div = coordinate / 2.0
-    
-    assert coordinate_div.x == 2.5
-    assert coordinate_div.y == 1.5
-    assert coordinate_div.z == 3.5
+        assert coordinate_div.x == 2.5
+        assert coordinate_div.y == 1.5
+        assert coordinate_div.z == 3.5
 
 def test_coordinate_mul():
     coordinate1 = Coordinate(x=5.0, y=3.0, z=7.0)
@@ -69,17 +59,12 @@ def test_coordinate_mul():
     #assert coordinate_mul.y == 15.0
     #assert coordinate_mul.z == -7.0
     
-    coordinate_mul = coordinate1 * 4.0
-    
-    assert coordinate_mul.x == 20.0
-    assert coordinate_mul.y == 12.0
-    assert coordinate_mul.z == 28.0
-    
-    coordinate_mul = coordinate1 * 4
-    
-    assert coordinate_mul.x == 20.0
-    assert coordinate_mul.y == 12.0
-    assert coordinate_mul.z == 28.0
+    for multiplier in (4, 4.0, ):
+        coordinate_mul = coordinate1 * multiplier
+        
+        assert coordinate_mul.x == 20.0
+        assert coordinate_mul.y == 12.0
+        assert coordinate_mul.z == 28.0
 
 def test_coordinate_sub():
     coordinate1 = Coordinate(x=5.0, y=3.0, z=7.0)
@@ -99,17 +84,12 @@ def test_coordinate_sub():
     #assert coordinate_sub.y == -2.0
     #assert coordinate_sub.z == 6.0
     
-    coordinate_sub = coordinate1 - 4.0
-    
-    assert coordinate_sub.x == 1.0
-    assert coordinate_sub.y == -1.0
-    assert coordinate_sub.z == 3.0
-    
-    coordinate_sub = coordinate1 - 4
-    
-    assert coordinate_sub.x == 1.0
-    assert coordinate_sub.y == -1.0
-    assert coordinate_sub.z == 3.0
+    for subtracter in (4, 4.0, ):
+        coordinate_sub = coordinate1 - subtracter
+        
+        assert coordinate_sub.x == 1.0
+        assert coordinate_sub.y == -1.0
+        assert coordinate_sub.z == 3.0
 
 def test_dot_product():
     coordinate1 = Coordinate(x=1.0, y=3.0, z=1.0)
