@@ -1,11 +1,9 @@
-from paddings import Padding
-from containers import HorizontalContainer, VerticalContainer
+from containers import VerticalContainer
 from cassopi.utils.yaml.parser import read_yaml
 
 class StructureParser():
     def __init__(self, structure):
-        content = read_yaml(structure)
-        self.content_root = content['VerticalContainer']
+        self.content = read_yaml(structure)
     
     def parse(self):
-        return globals()['VerticalContainer'](args=self.content_root)
+        return globals()[self.content.keys()[0]](args=self.content.values()[0])
