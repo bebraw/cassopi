@@ -6,16 +6,9 @@ Vector (3d) class.
 from coordinate import Coordinate
 
 class Vector():
-    '''
-    Vector containing X, Y and Z components. Vector is always relative to origin.
-    '''
-    def __init__(self, dir=[0.0, 0.0, 0.0]):
-        '''
-        pre:
-            isinstance(dir, list)
-            len(dir) == 3
-        '''
-        self.dir = Coordinate(dir)
+    def __init__(self, **kwargs):
+        x, y, z = 0.0, 0.0, 0.0
+        self.dir = Coordinate(x=x, y=y, z=z)
     
     def __str__(self):
         '''
