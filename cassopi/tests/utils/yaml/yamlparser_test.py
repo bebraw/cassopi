@@ -9,7 +9,7 @@ def test_read_invalid_file():
     assert file_content is None
 
 def test_read_valid_file():
-    file_content = read_yaml('valid.yaml')    
+    file_content = read_yaml('valid.yaml') # put in proper place and fix path!  
     assert file_content is not None
 
 def test_read_non_file_structure():

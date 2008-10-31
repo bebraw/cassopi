@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.2.dtd">
 <!-- eric4 project file for project cassopi -->
-<!-- Saved: 2008-10-31, 17:27:02 -->
+<!-- Saved: 2008-10-31, 17:40:36 -->
 <!-- Copyright (C) 2008 ,  -->
 <Project version="4.2">
   <ProgLanguage mixed="0">Python</ProgLanguage>
@@ -268,6 +268,45 @@
       <Dir>utils</Dir>
       <Dir>yaml</Dir>
       <Name>valid.yaml</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>uiparser.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>paddings.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>ui</Dir>
+      <Name>uicontainers.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>ui</Dir>
+      <Name>uicontainers_test.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>ui</Dir>
+      <Name>paddings_test.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>ui</Dir>
+      <Name>uiparser_test.py</Name>
+    </Source>
+    <Source>
+      <Dir>cassopi</Dir>
+      <Dir>tests</Dir>
+      <Dir>ui</Dir>
+      <Name>__init__.py</Name>
     </Source>
   </Sources>
   <Forms>
