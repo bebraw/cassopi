@@ -9,8 +9,3 @@ class StructureParser():
     
     def parse(self):
         return globals()['VerticalContainer'](args=self.content_root)
-
-def parse_ui(structure):
-    content = read_yaml(structure)
-    structure_parser = StructureParser(content)
-    return structure_parser.parse()
